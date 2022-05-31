@@ -1,12 +1,12 @@
 import './App.css';
 import Header from './Header';
+import LogControl from './LogControl';
 
 function App() {
   return (
     <div className="App">
-      <Header>
-
-      </Header>
+      <Header />
+      <LogControl />
     </div>
   );
 }
