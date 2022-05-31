@@ -14,7 +14,7 @@ class LogControl extends React.Component{
 
   render(){
     //conditionals go here
-
+    // other component tag elements will pass state slice and methods from above, here.
 
 
     return(
