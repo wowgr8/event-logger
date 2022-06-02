@@ -1,9 +1,9 @@
 import React from "react";
 import { v4 } from 'uuid';
-// import proptypes
+import PropTypes from "prop-types";
 // import ReusableForm from "./ReusableForm";
 
-function NewLog(){
+function NewLog(props){
 
   // function for eventhandler will go here (it's being passed down from control)
   function handleNewLogSubmission(event){
@@ -32,5 +32,9 @@ function NewLog(){
     </React.Fragment>
   );
 }
+
+NewLog.propTypes = {
+  onNewLogCreation: PropTypes.func
+};
 
 export default NewLog;
