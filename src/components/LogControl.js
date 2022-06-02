@@ -15,6 +15,9 @@ class LogControl extends React.Component{
   }
 
   //Methods for buttons go here
+  handleClick = () => {
+    this.setState({formVisibleOnPage: true});
+  }
 
 
 
