@@ -34,7 +34,7 @@ class LogControl extends React.Component{
     let currentlyVisibleState = null;
     let buttonText = null;
     if(this.state.formVisibleOnPage){
-      currentlyVisibleState = <NewLog  onNewLogCreation={this.handleAddingNewTicketToList}/>;
+      currentlyVisibleState = <NewLog  onNewLogCreation={this.handleAddingNewLogToList}/>;
       buttonText = "Return to Log List";
     } else {
       currentlyVisibleState = <LogList logList = {this.state.mainLogList}/>
