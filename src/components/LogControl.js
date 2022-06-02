@@ -7,6 +7,10 @@ import React from "react";
 class LogControl extends React.Component{
 
   // constructor w/ props and state goes here
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
 
   //Methods for buttons go here
 
