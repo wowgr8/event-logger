@@ -1,19 +1,26 @@
 import React from "react";
 import Log from "./Log";
-// import proptypes
+import PropTypes from "prop-types";
 
-function LogList(){
+function LogList(props){
 
   return(
     <React.Fragment>
       <hr/>
-      <h1> Note: this is where we loop through logs using .map. arrow notation in map arguemtn will show
-        <Log 
-        // {/* <Log log props  /> */} 
+      {props.logList.map((log, index) => 
+        <Log
+          names = {log.names}
+          location = {log.location}
+          log = {log.notes}
+          key={index}
         />
-      </h1>
+      )}
     </React.Fragment>
   );
 }
+
+LogList.propTypes = {
+  logList: PropTypes.array
+};
 
 export default LogList;
