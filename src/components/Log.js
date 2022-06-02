@@ -5,7 +5,7 @@ function Log(props){
   return(
     <React.Fragment>
       <h3>{props.location} - {props.names}</h3>
-      <p><em>{props.log}</em></p>
+      <p><em>{props.notes}</em></p>
       <hr/>
     </React.Fragment>
   )
@@ -14,7 +14,7 @@ function Log(props){
 Log.propTypes = {
   names: PropTypes.string,
   location: PropTypes.string,
-  log: PropTypes.string
+  notes: PropTypes.string
 };
 
 export default Log;
