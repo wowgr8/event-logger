@@ -10,7 +10,8 @@ class LogControl extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      mainLogList: []
     };
   }
 
@@ -30,7 +31,7 @@ class LogControl extends React.Component{
       currentlyVisibleState = <NewLog />;
       buttonText = "Return to Log List";
     } else {
-      currentlyVisibleState = <LogList />
+      currentlyVisibleState = <LogList logList = {this.state.mainLogList}/>
       buttonText = "Add Log";
     }
 
