@@ -11,7 +11,7 @@ function LogList(props){
         <Log
           names = {log.names}
           location = {log.location}
-          log = {log.notes}
+          notes = {log.notes}
           key={index}
         />
       )}
