@@ -25,19 +25,20 @@ class LogControl extends React.Component{
 
   render(){
     let currentlyVisibleState = null;
-    let addLogButton = null;
+    let buttonText = null;
     if(this.state.formVisibleOnPage){
-      currentlyVisibleState = <NewLog />
+      currentlyVisibleState = <NewLog />;
+      buttonText = "Return to Log List";
     } else {
       currentlyVisibleState = <LogList />
-      addLogButton = <button onClick={this.handleClick}>Add Log</button>
+      buttonText = "Add Log";
     }
 
 
     return(
       <React.Fragment>
         {currentlyVisibleState}
-        {addLogButton}
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }
