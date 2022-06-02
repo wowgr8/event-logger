@@ -1,13 +1,20 @@
 import React from "react";
-// import proptypes
+import PropTypes from "prop-types";
 
-function Log(){
+function Log(props){
   return(
     <React.Fragment>
-      <h1> This should show info that was submitted via NewLog.js using ReusableForm. </h1>
-      <h1> Props will be needed</h1>
+      <h3>{props.location} - {props.names}</h3>
+      <p><em>{props.log}</em></p>
+      <hr/>
     </React.Fragment>
   )
 }
+
+Log.propTypes = {
+  names: PropTypes.string,
+  location: PropTypes.string,
+  log: PropTypes.string
+};
 
 export default Log;
