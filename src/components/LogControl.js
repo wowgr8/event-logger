@@ -23,6 +23,12 @@ class LogControl extends React.Component{
   }
 
 
+  handleAddingNewLogToList = (newLog) => {
+    const newMainLogList = this.state.mainLogList.concat(newLog);
+    this.setState({mainLogList: newMainLogList, 
+                  formVisibleOnPage: false});
+  }
+
 
   render(){
     let currentlyVisibleState = null;
