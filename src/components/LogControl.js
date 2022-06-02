@@ -19,13 +19,17 @@ class LogControl extends React.Component{
 
 
   render(){
-    //conditionals go here
-    // other component tag elements will pass state slice and methods from above, here.
+    let currentlyVisibleState = null;
+    if(this.state.formVisibleOnPage){
+      currentlyVisibleState = <NewLog />
+    } else {
+      currentlyVisibleState = <LogList />
+    }
 
 
     return(
       <React.Fragment>
-        <h2>This is the currently visible view/log variable placeholder</h2>
+        {currentlyVisibleState}
         <h3> post button placeholder</h3>
       </React.Fragment>
     );
