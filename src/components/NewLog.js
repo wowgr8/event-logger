@@ -1,7 +1,7 @@
 import React from "react";
 // import UUID
 // import proptypes
-// import reusableForm
+import ReusableForm from "./ReusableForm";
 
 function NewLog(){
 
