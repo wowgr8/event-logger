@@ -8,9 +8,11 @@ function NewLog(props){
   // function for eventhandler will go here (it's being passed down from control)
   function handleNewLogSubmission(event){
     event.preventDefault();
-    console.log(event.target.names.value);
-    console.log(event.target.location.value);
-    console.log(event.target.log.value);
+    props.onNewLogCreation({names: event.target.names.value,
+                            location: event.target.location.value,
+                            notes: event.target.notes.value,
+                            id: v4()
+                            });
   }
 
   return(
@@ -25,7 +27,7 @@ function NewLog(props){
           name='location'
           placeholder='Location' />
         <textarea
-          name='log'
+          name='notes'
           placeholder='Log  bird details.' />
         <button type='submit'>Log!</button>
       </form>
